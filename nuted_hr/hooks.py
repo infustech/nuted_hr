@@ -242,3 +242,10 @@ app_license = "mit"
 # 	"Logging DocType Name": 30  # days to retain logs
 # }
 
+permission_query_conditions = {
+    "Demand Management": "nuted_hr.nuted_hr.doctype.demand_management.demand_management.get_permission_query_conditions"
+}
+
+has_permission = {
+    "Demand Management": "nuted_hr.nuted_hr.doctype.demand_management.demand_management.has_permission"
+}

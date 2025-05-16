@@ -1,0 +1,121 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-05-14 23:24:01.281521",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "tur",
+  "aciklama",
+  "column_break_idnd",
+  "durum",
+  "talep_eden",
+  "talep_karsilayan",
+  "dosya",
+  "dosya_link"
+ ],
+ "fields": [
+  {
+   "fieldname": "tur",
+   "fieldtype": "Link",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Talep T\u00fcr\u00fc",
+   "options": "Demand Type",
+   "reqd": 1
+  },
+  {
+   "fieldname": "aciklama",
+   "fieldtype": "Small Text",
+   "label": "A\u00e7\u0131klama"
+  },
+  {
+   "fieldname": "column_break_idnd",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "durum",
+   "fieldtype": "Select",
+   "label": "Durum",
+   "read_only_depends_on": "eval:!frappe.user.has_role(\"HR User\")"
+  },
+  {
+   "fieldname": "talep_eden",
+   "fieldtype": "Link",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Olu\u015fturan Kullan\u0131c\u0131",
+   "options": "User",
+   "read_only": 1
+  },
+  {
+   "fieldname": "talep_karsilayan",
+   "fieldtype": "Link",
+   "label": "\u0130\u015fleme Alan Kullan\u0131c\u0131",
+   "options": "User",
+   "read_only": 1
+  },
+  {
+   "fieldname": "dosya",
+   "fieldtype": "Attach",
+   "label": "Dosya",
+   "read_only_depends_on": "eval:!frappe.user.has_role(\"HR User\")"
+  },
+  {
+   "fieldname": "dosya_link",
+   "fieldtype": "HTML",
+   "label": "Dosya",
+   "read_only": 1
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-05-16 10:45:04.046116",
+ "modified_by": "Administrator",
+ "module": "Nuted HR",
+ "name": "Demand Management",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Employee",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "HR User",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
